@@ -1,0 +1,44 @@
+{
+  "name": "laravel-mix-cli",
+  "version": "0.2.0",
+  "description": "A simple CLI for initiating laravel-mix projects in non-laravel, standalone projects",
+  "preferGlobal": true,
+  "bin": {
+    "mix": "bin/mix",
+    "mix-init": "bin/mix-init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohannadNaj/laravel-mix-cli.git"
+  },
+  "keywords": [
+    "mix",
+    "laravel",
+    "laravel-mix",
+    "laravel-mix-cli",
+    "frontend-scaffolding"
+  ],
+  "author": "Mohannad Najjar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MohannadNaj/laravel-mix-cli/issues"
+  },
+  "homepage": "https://github.com/MohannadNaj/laravel-mix-cli#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cs-fix": "standard --fix"
+  },
+  "dependencies": {
+    "commander": "^2.11.0",
+    "download-git-repo": "^1.0.1",
+    "fs-extra": "^4.0.2",
+    "lodash": "^3.10.1",
+    "promptly": "^2.2.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}
