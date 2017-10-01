@@ -1,6 +1,6 @@
 {
   "name": "laravel-mix-cli",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A simple CLI for initiating laravel-mix projects in non-laravel, standalone projects",
   "preferGlobal": true,
   "bin": {
