@@ -7,7 +7,7 @@ module.exports = {
   commandRunning: 'Running "%s"',
   downloadTemplateError: 'Error downloading the template at: [laravel-mix-templates/%s], checking if there is a cached version..',
   cacheIsFound: 'a cached version of the template [%s] is found.',
-  successTemplateDownload: 'Template  [laravel-mix-templates/${this.templateName}] downloaded successfully',
+  successTemplateDownload: 'Template  [laravel-mix-templates/%s] downloaded successfully',
   templateNotFound: 'Couldn\'t find the template [%s]',
   exit: 'Exiting..'
 }
