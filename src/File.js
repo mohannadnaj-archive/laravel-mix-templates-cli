@@ -1,6 +1,6 @@
 /* Modified from: laravel-mix/src/File.js */
-let path = require('path')
-let fs = require('fs-extra')
+const path = require('path')
+const fs = require('fs-extra')
 
 class File {
     /**

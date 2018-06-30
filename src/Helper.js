@@ -1,3 +1,8 @@
+const File = require('./File')
+const util = require('util')
+const exec = require('child_process').exec
+const Messages = require('./Messages')
+
 class Helper {
   static isNo (message) {
     return message.toLowerCase().substr(0, 1) === 'n'

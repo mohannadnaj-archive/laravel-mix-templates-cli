@@ -1,4 +1,4 @@
-require('../index')
+const program = require('commander')
 const MixInitializer = require('../MixInitializer')
 
 let chosenTemplate = 'default'
@@ -15,7 +15,7 @@ program
 program.parse(process.argv)
 
 new MixInitializer({
-  destination: program.dir,
+  destination: program.dir || './',
   template: chosenTemplate,
-  installDependencies: program.install
+  installDependencies: program.install || false
 })

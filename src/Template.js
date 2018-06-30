@@ -1,3 +1,7 @@
+const File = require('./File')
+const FileCollection = require('./FileCollection')
+let fs = require('fs-extra')
+
 class Template {
   constructor (_path, destination = './') {
     if (!File.exists(_path)) {
@@ -25,7 +29,7 @@ class Template {
   }
 
   copy () {
-    return fs.copy(this.path, this.destination)
+    return fs.copySync(this.path, this.destination)
   }
 }
 

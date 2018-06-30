@@ -25,8 +25,42 @@
   },
   "homepage": "https://github.com/MohannadNaj/laravel-mix-cli#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cs-fix": "standard --fix"
+    "test": "nyc ava --verbose --serial",
+    "test:watch": "nyc ava --verbose --serial --watch",
+    "ava:watch": "ava --verbose --serial --watch",
+    "lint": "standard --fix"
+  },
+  "files": [
+    "src",
+    "bin",
+    "templates"
+  ],
+  "ava": {
+    "files": ["test/MixInitializer.spec.js"],
+    "sources": [
+      "src/**/*",
+      "!templates/**/*",
+      "!templates/temp/**/*",
+      "!stubs/**/*"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "src/**/*"
+    ],
+    "exclude": [
+      "**/test/**/*"
+    ],
+    "sourceMap": true,
+    "instrument": true,
+    "require": [],
+    "all": true,
+    "reporter": [
+      "json",
+      "lcov",
+      "html",
+      "text"
+    ]
   },
   "dependencies": {
     "commander": "^2.11.0",
@@ -39,6 +73,10 @@
     "node": ">=4.0.0"
   },
   "devDependencies": {
+    "ava": "^0.24.0",
+    "mock-require": "^2.0.2",
+    "nyc": "^11.3.0",
+    "sinon": "^4.1.2",
     "standard": "^10.0.3"
   }
 }

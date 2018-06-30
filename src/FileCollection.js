@@ -1,3 +1,7 @@
+const File = require('./File')
+const _ = require('lodash')
+let fs = require('fs-extra')
+
 class FileCollection {
   constructor (path) {
     this.path = path
@@ -14,7 +18,7 @@ class FileCollection {
   }
 
   filesToArray (property = 'filePath') {
-    return _.map(this.files, property)
+    return _.map(this.files, property) // this.files.map(x => x[property])
   }
 
   forEach (callback) {
